@@ -4,7 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
 
-/* namespace are like env path
+/* namespace are like virtual env path
 methods can be called as functions too
  */
 namespace c_sharp.Models
