@@ -1,3 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-/* this file is a class. Extension is .cs */
+﻿using c_sharp.Models; // it's like a include in c lang.
+
+Person p = new Person(); // it's like a function that returns a struct initialized.

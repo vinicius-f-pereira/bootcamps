@@ -20,3 +20,7 @@ namespace c_sharp.Models
 		}
 	}
 }
+
+/* You can use @class or any other reserved key of CS with '@', but isn't a good practice. */
+/* You can build to class with the same name in the same project, but they need to have
+different namespaces. */
