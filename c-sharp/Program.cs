@@ -226,3 +226,14 @@ foreach (string item in strList)
 {
 	Console.WriteLine(item);
 }
+
+Console.WriteLine($"Total itens {strList.Count} - Cap: {strList.Capacity}");
+
+strList.Add("RJ");
+
+Console.WriteLine($"Total itens {strList.Count} - Cap: {strList.Capacity}");
+
+strList.Add("SC");
+strList.Remove("MG");
+
+Console.WriteLine($"Total itens {strList.Count} - Cap: {strList.Capacity}");
