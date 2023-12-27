@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Formats.Asn1;
+using System.Runtime.Serialization.Formatters;
 using System.Xml.Serialization;
 using c_sharp.Models; // it's like a include in c lang.
 
@@ -136,7 +137,6 @@ bool showMenu = true;
 
 while (showMenu)
 {
-	Console.Clear();
 	Console.WriteLine($"Select an option:");
 	Console.WriteLine($"1 - Register customer");
 	Console.WriteLine($"2 - Search customer:");
@@ -171,3 +171,36 @@ while (showMenu)
 }
 
 Console.WriteLine("THE END");
+
+/* **************************************************** */
+
+/* arrays */
+
+int[] tab = new int[3]; // this is the way to declare array of int in cs
+
+/* adding values */
+
+tab[0] = 42;
+tab[1] = 24;
+tab[2] = 3;
+
+/* to access index */
+
+for (int count = 0; count < tab.Length; count++) // var.Lenght get lenght of var
+	Console.WriteLine($"Tab position {count} and tab value {tab[count]}");
+
+/* we can use foreach too */
+
+foreach (int value in tab)
+{
+	Console.WriteLine(value);
+}
+
+/* resize of array */
+
+Array.Resize(ref tab, tab.Length * 2);
+
+/* copying one array to other */
+
+int[] tab2 = new int[tab.Length * 2];
+Array.Copy(tab, tab2, tab.Length);
