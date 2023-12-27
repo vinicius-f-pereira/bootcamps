@@ -1,9 +1,10 @@
 ﻿using System.Data;
+using System.Xml.Serialization;
 using c_sharp.Models; // it's like a include in c lang.
 
 Person person1 = new Person(); // it's like a function that returns a struct initialized.
 
-person1.Name = "Thalia Franco Cardoso de Freitas";
+person1.Name = "Thalia Pereira";
 person1.Age = 3;
 person1.Greeting();
 
@@ -17,7 +18,37 @@ Console.WriteLine("Height \n" + height.ToString("0.00")); // this is needed to p
 Console.WriteLine("Price \n" + price);
 
 // we have a type to work with data and time too.
-DateTime dataNow =  DateTime.Now.AddDays(amount);
+DateTime dataNow = DateTime.Now.AddDays(amount);
 Console.WriteLine(dataNow);
-dataNow =  DateTime.Now.AddDays(5);
+dataNow = DateTime.Now.AddDays(5);
 Console.WriteLine(dataNow.ToString("dd/MM/yyyy"));
+
+/* ******************************** */
+
+// Casting
+
+/* int number = "5" */
+long number = Convert.ToInt32("5");
+// number = Convert.ToUInt16("5");
+// number = Convert.ToInt64("5");
+Console.WriteLine(number);
+/**
+* Some types can't be converted because don't fit in anothers.
+* like try convert to int64 if the variable was declared as int (same as int32)
+*/
+
+/**
+* We can use Parse too, but parse can fail if data is invalid. Parse will stop
+* the program, while convert if receive a null input will
+* return '0'. */
+
+string test = Convert.ToString(5); /* not common way to convert */
+test = number.ToString(); // better way to convert a number
+
+Console.WriteLine(test);
+
+
+/**
+* implict casting as talked above, when a type fit in another type we can
+* use a implicit casting. e.g. (int a = 5, double b = a).
+ */
