@@ -39,8 +39,25 @@ namespace c_sharp.Models
 
 		public void Sin(double angle)
 		{
-			double rad = angle * Math.PI;
+			double rad = Math.Round(angle * Math.PI / 180);
 			Console.WriteLine($"Sin of {angle}° = {Math.Sin(rad)}");
+		}
+
+		public void Cos(double angle)
+		{
+			double rad = Math.Round(angle * Math.PI / 180);
+			Console.WriteLine($"Cosine of {angle}° = {Math.Cos(rad)}");
+		}
+
+		public void Tan(double angle)
+		{
+			double rad = Math.Round(angle * Math.PI / 180);
+			Console.WriteLine($"Tangent of {angle}° = {Math.Tan(rad)}");
+		}
+
+		public void SquareRoot(double x)
+		{
+			Console.WriteLine($"Raiz quadrada de {x} = {Math.Sqrt(x)}");
 		}
 	}
 }

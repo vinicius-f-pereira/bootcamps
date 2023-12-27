@@ -110,4 +110,7 @@ calc.Mult(3, 3);
 calc.Div(3, 3);
 calc.Mod(3, 3);
 calc.Pow(3, 3);
-calc.Sin(3);
+calc.Sin(90);
+calc.Cos(90);
+calc.Tan(90);
+calc.SquareRoot(9);
