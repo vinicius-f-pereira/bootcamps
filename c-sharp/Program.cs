@@ -84,3 +84,21 @@ else
 	Console.WriteLine("Sorry, out of stock.");
 
 /* switch case */
+
+Console.WriteLine("Type a letter");
+string letter = Console.ReadLine();
+
+switch (letter)
+{
+	case "a":
+	case "e":
+	case "i":
+	case "o":
+	case "u":
+		Console.WriteLine("Vowel");
+		break;
+	default:
+		Console.WriteLine("Not Vowel");
+		break;
+}
+
