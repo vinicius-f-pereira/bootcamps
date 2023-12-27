@@ -32,9 +32,15 @@ namespace c_sharp.Models
 			Console.WriteLine($"{x} % {y} = {x % y}");
 		}
 
-		public void pow(int x, int y)
+		public void Pow(int x, int y)
 		{
 			Console.WriteLine($"{x} ^ {y} = {Math.Pow(x, y)}");
+		}
+
+		public void Sin(double angle)
+		{
+			double rad = angle * Math.PI;
+			Console.WriteLine($"Sin of {angle}° = {Math.Sin(rad)}");
 		}
 	}
 }
