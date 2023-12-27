@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Formats.Asn1;
 using System.Xml.Serialization;
 using c_sharp.Models; // it's like a include in c lang.
 
@@ -66,3 +67,20 @@ Console.WriteLine(x);
 Console.WriteLine("Conversion done successfully");
 
 /* if and else statement are like in pure c lang. */
+
+int stock = 10;
+int salesAmount = 0;
+bool enough = salesAmount > 0 && stock >= salesAmount;
+
+Console.WriteLine($"Stock: {stock}");
+Console.WriteLine($"Customer amount: {salesAmount}");
+Console.WriteLine($"We have in stock?: {enough}");
+
+if (salesAmount == 0)
+	Console.WriteLine("Invalid amount");
+else if (enough)
+	Console.WriteLine("Sold");
+else
+	Console.WriteLine("Sorry, out of stock.");
+
+/* switch case */
