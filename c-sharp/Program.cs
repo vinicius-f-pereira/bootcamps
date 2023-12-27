@@ -204,3 +204,25 @@ Array.Resize(ref tab, tab.Length * 2);
 
 int[] tab2 = new int[tab.Length * 2];
 Array.Copy(tab, tab2, tab.Length);
+
+/* ************************************************** */
+
+/* working with lists */
+
+List<string> strList = new List<string>();
+
+/* adding elements single or N elements */
+
+strList.Add("SP");
+strList.Add("BA");
+strList.Add("MG");
+
+for (int count = 0; count < strList.Count; count++)
+{
+	Console.WriteLine($"Tab position {count} and tab value {strList[count]}");
+}
+
+foreach (string item in strList)
+{
+	Console.WriteLine(item);
+}
