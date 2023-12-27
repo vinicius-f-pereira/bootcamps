@@ -52,3 +52,17 @@ Console.WriteLine(test);
 * implict casting as talked above, when a type fit in another type we can
 * use a implicit casting. e.g. (int a = 5, double b = a).
  */
+
+/**
+* the best way to convert in c# (until now)
+*/
+
+string source = "15-";
+int x = 0;
+
+int.TryParse(source, out x);
+
+Console.WriteLine(x);
+Console.WriteLine("Conversion done successfully");
+
+/* if and else statement are like in pure c lang. */
