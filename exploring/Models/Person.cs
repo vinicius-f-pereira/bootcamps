@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace exploring.Models
 	{
 		//validating get and set
 		private string _name;
+		private int _age;
+
 		public string Name 
 		{
 			// this symbol "=>" called as body expression. Used to simple 
@@ -25,7 +28,19 @@ namespace exploring.Models
 				_name = value;
 			}
 		}
-		public int Age { get; set; }
+		public int Age
+		{
+			get => _age;
+			
+			set
+			{
+				if (value < 0)
+				{
+					throw new ArgumentException("Age can't be less than zero!");
+				}
+				_age = value;
+			}
+		}
 		
 		public void Greeting()
 		{
