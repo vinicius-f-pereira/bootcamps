@@ -7,7 +7,25 @@ namespace exploring.Models
 {
 	public class Person
 	{
-		public string Name { get; set; }
+		//validating get and set
+		private string _name;
+		public string Name 
+		{
+			get
+			{
+				return _name.ToUpper();
+			}
+			
+			set
+			{
+				//if it enter here, will throw exception and stop the program.
+				if (value == "")
+				{
+					throw new ArgumentException("Name can't be empty!");
+				}
+				_name = value;
+			}
+		}
 		public int Age { get; set; }
 		
 		public void Greeting()
