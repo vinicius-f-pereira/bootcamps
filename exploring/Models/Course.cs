@@ -14,5 +14,7 @@ namespace exploring.Models
 		public void AddStudent(Person student) => Students.Add(student);
 
 		public int Enrolled() => Students.Count;
+
+		public void RemoveStudent(Person student) => Students.Remove(student);
 	}
 }
