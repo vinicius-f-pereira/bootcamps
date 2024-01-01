@@ -4,6 +4,8 @@ using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/* public means that everyone can access this class/method/properties */
+/* private means that only can be accessed inside of the own class */
 namespace exploring.Models
 {
 	public class Person
