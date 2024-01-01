@@ -11,10 +11,9 @@ namespace exploring.Models
 		private string _name;
 		public string Name 
 		{
-			get
-			{
-				return _name.ToUpper();
-			}
+			// this symbol "=>" called as body expression. Used to simple 
+			// validations, don't need to use curly brackets and return
+			get => _name.ToUpper();
 			
 			set
 			{
