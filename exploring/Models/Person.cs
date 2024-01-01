@@ -5,7 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 
 /* public means that everyone can access this class/method/properties */
-/* private means that only can be accessed inside of the own class */
+/* private means that only can be accessed inside of the own class in properties */
+/* if you try access in another file, you will receive a warning saying that you
+ * can't access it because you don't have privileges. */
+
 namespace exploring.Models
 {
 	public class Person
@@ -14,12 +17,12 @@ namespace exploring.Models
 		private string _name;
 		private int _age;
 
-		public string Name 
+		public string Name
 		{
 			// this symbol "=>" called as body expression. Used to simple 
 			// validations, don't need to use curly brackets and return
 			get => _name.ToUpper();
-			
+
 			set
 			{
 				//if it enter here, will throw exception and stop the program.
@@ -33,7 +36,7 @@ namespace exploring.Models
 		public int Age
 		{
 			get => _age;
-			
+
 			set
 			{
 				if (value < 0)
@@ -43,7 +46,7 @@ namespace exploring.Models
 				_age = value;
 			}
 		}
-		
+
 		public void Greeting()
 		{
 			Console.WriteLine($"Name: {Name}, Age: {Age}");
