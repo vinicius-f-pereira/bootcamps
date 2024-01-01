@@ -16,5 +16,13 @@ namespace exploring.Models
 		public int Enrolled() => Students.Count;
 
 		public void RemoveStudent(Person student) => Students.Remove(student);
+
+		public void ListStudents()
+		{
+			foreach (Person student in Students)
+			{
+				Console.WriteLine(student.FullName);
+			}
+		}
 	}
 }
