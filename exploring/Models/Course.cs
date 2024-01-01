@@ -12,5 +12,7 @@ namespace exploring.Models
 
 		//body expression can be used in methods too.
 		public void AddStudent(Person student) => Students.Add(student);
+
+		public int Enrolled() => Students.Count;
 	}
 }
