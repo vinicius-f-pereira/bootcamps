@@ -19,6 +19,7 @@ namespace exploring.Models
 
 		public void ListStudents()
 		{
+			Console.WriteLine($"Students from {Name} course:");
 			foreach (Person student in Students)
 			{
 				Console.WriteLine(student.FullName);
