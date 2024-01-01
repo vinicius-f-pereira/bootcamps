@@ -33,6 +33,13 @@ namespace exploring.Models
 				_name = value;
 			}
 		}
+		
+		public string LastName { get; set; }
+
+		// when have only get and not set, property turn read only, it means
+		// that you can't change in another file (e.g. person.FullName = "")
+		public string FullName => $"{Name} {LastName}".ToUpper();
+
 		public int Age
 		{
 			get => _age;
@@ -49,7 +56,7 @@ namespace exploring.Models
 
 		public void Greeting()
 		{
-			Console.WriteLine($"Name: {Name}, Age: {Age}");
+			Console.WriteLine($"Name: {FullName}, Age: {Age}");
 		}
 	}
 }
