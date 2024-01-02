@@ -13,13 +13,6 @@ namespace exploring.Models
 {
 	public class Person
 	{
-		/* constructor by//all constructor have the same name of class
-		 * convention are declared below class, at start. */
-		public Person(string name, string lastname)
-		{
-
-		}
-
 		/* this second constructor are to be able create a new contructor
 		 * withou give args in parameters, to not turn mandatory give strings
 		 * in argument */
@@ -27,6 +20,15 @@ namespace exploring.Models
 		{
 
 		}
+
+		/* constructor by//all constructor have the same name of class
+		 * convention are declared below class, at start. */
+		public Person(string name, string lastname)
+		{
+			Name = name;
+			LastName = lastname;
+		}
+
 
 		//validating get and set
 		private string _name;
