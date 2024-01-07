@@ -20,9 +20,12 @@ namespace exploring.Models
 		public void ListStudents()
 		{
 			Console.WriteLine($"Students from {Name} course:");
-			foreach (Person student in Students)
+			for (int count = 0; count < Students.Count; count++)
 			{
-				Console.WriteLine(student.FullName);
+				// string message = "Nbr " + (count + 1) + " " + Students[count].FullName; concatenation of strings. 
+				string message = $"Std Nbr: {count + 1} - {Students[count].FullName}"; // interpolation of a string '$' to accept vars
+
+				Console.WriteLine(message);
 			}
 		}
 	}
